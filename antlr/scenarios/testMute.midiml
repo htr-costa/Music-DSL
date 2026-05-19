@@ -1,0 +1,17 @@
+### Test scenario
+## Mute an instrument (volume forced to 0)
+
+titre testmute
+
+tempo 120bpm
+rythme 4/4
+
+instrument PIANO mute
+{
+    | DO RE MI FA
+}
+
+instrument PIANO
+{
+    | DO RE MI FA
+}

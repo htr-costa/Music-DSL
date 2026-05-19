@@ -155,6 +155,11 @@ public class ModelBuilder extends MidimlBaseListener {
     }
 
     @Override
+    public void enterMute(MidimlParser.MuteContext ctx) {
+        tracks.get(tracks.size() - 1).setVolume(0);
+    }
+
+    @Override
     public void enterChangeTempo(MidimlParser.ChangeTempoContext ctx) {
         currentTempo = Integer.parseInt(ctx.tempo.getText());
     }

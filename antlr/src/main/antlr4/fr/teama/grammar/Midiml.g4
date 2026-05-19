@@ -14,8 +14,9 @@ settings          :   (initialTempo|globalRythme)+;
     globalRythme:   'rythme' rythme=RYTHME;
 
 tracks          :   instrument+;
-    instrument  :   'instrument' name=INSTRUMENT volume? partition;
+    instrument  :   'instrument' name=INSTRUMENT volume? mute? partition;
     volume      :   'volume' volumeVal=INT;
+    mute        :   'mute';
     partition   :   '{'  (changeTempo|changeRythme|bar|reusedBar)+  '}';
     changeTempo :   tempo=INT 'bpm';
     changeRythme:   rythme=RYTHME;
